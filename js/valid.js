@@ -28,14 +28,15 @@ $(document).ready(function() {
         //если форма валидна, то
         if (formValid) {
             //сркыть модальное окно
-            $('#myModal').modal('hide');
-            //отобразить сообщение об успехе
-            $('#success-alert').removeClass('hidden');
+            $(".modal-body").html("<h2 class='success'>Спасибо! Ваша заявка принята!</h2>");
+            setTimeout(function() {
+                $('#myModal').modal('hide');
+            }, 3000);
         }
     });
+});
 
-
-
+$(function() {
         //при нажатии на кнопку с id="callformbtn"
         $('#callformbtn').click(function () {
             //переменная formValid
@@ -70,6 +71,5 @@ $(document).ready(function() {
                 $('#show').removeClass('hidden');
             }
         });
-
 });
 

@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Аренда 1С</title>
-    <link href="style/main.less" rel="stylesheet">
     <!-- Less -->
-    <script src="less/less.js"></script>
+    <link href="style/main.less" rel="stylesheet">
     <link href="style/main.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -70,7 +69,7 @@
                     <!-- Основная часть модального окна, содержащая форму для заказа обратного звонка -->
                     <div class="modal-body">
                         <!-- Форма для обратного звонка -->
-                        <form role="form" class="form-horizontal">
+                        <form role="form" class="form-horizontal" id="form1">
                             <!-- Блок для ввода имени -->
                             <div class="form-group has-feedback">
                                 <label for="login" class="control-label col-xs-3">Имя:</label>
@@ -99,7 +98,7 @@
                     <!-- Нижняя часть модального окна -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Я передумал</button>
-                        <button id="save" type="button" class="btn btn-success">Я УСПЕЛ</button>
+                        <button id="save" type="submit" form="form1" value="Submit" class="btn btn-success">Я УСПЕЛ</button>
                     </div>
                 </div>
             </div>
@@ -129,14 +128,14 @@
         <div class="col-md-12 center" id="toshow">
             <h1>Успейте воспользоваться специальным предложением!</h1>
             <h3>Только сегодня и только сейЧАС все предложения со скидкой 50%</h3>
-            <form role="form" class="form-horizontal">
+            <form role="form" class="form-horizontal" id="form3">
                 <!-- Блок для ввода имени -->
                 <div class="form-group has-feedback">
                     <label for="login3" class="control-label col-xs-3">Имя:</label>
                     <div class="col-xs-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input type="text" id="login3" class="form-control" reqname="login2" required placeholder="Иван" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                            <input type="text" id="login3" class="form-control" name="login2" required placeholder="Иван" pattern="[A-Za-zА-Яа-яЁё]{2,}">
                         </div>
                         <span class="glyphicon form-control-feedback"></span>
                     </div>
@@ -153,7 +152,7 @@
                     </div>
                 </div>
                 <!-- Конец блока для ввода номера телефона-->
-                <button type="button" id="callformbtn2" class="btn btn-danger" data-target="#myProduct">Получить скидку</button>
+                <button type="submit" value="submit" form="form3" id="callformbtn2" class="btn btn-danger" data-target="#myProduct">Получить скидку</button>
             </form>
         </div>
         <div class="alert alert-success hidden" id="show">
@@ -461,7 +460,7 @@
                         <div class="col-md-12 center" id="toshow2">
                         <h1>Успейте воспользоваться специальным предложением!</h1>
                         <h3>Только сегодня и только сейчас все предложения со скидкой 50%</h3>
-                        <form role="form" class="form-horizontal">
+                        <form role="form" class="form-horizontal" id="form2">
                             <!-- Блок для ввода имени -->
                             <div class="form-group has-feedback">
                                 <label for="login2" class="control-label col-xs-3">Имя:</label>
@@ -485,7 +484,7 @@
                                 </div>
                             </div>
                             <!-- Конец блока для ввода номера телефона-->
-                            <button type="button" id="callformbtn" class="btn btn-danger" data-target="#myProduct">Получить скидку</button>
+                            <button type="submit" id="callformbtn" class="btn btn-danger" form="form2" value="submit" data-target="#myProduct">Получить скидку</button>
                         </form>
                     </div>
                         <div class="alert alert-success hidden" id="show2">
