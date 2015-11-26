@@ -1,0 +1,252 @@
+body {
+  padding-top: 50px;
+  background-color: #b3b3b3;
+}
+.navbar li {
+  line-height: 90px;
+}
+.navbar li:hover {
+  background-color: #99252E;
+}
+.navbar .nav .dropdown-menu a li:hover {
+  background-color: #99252E;
+  color: #ffffff;
+}
+.navbar form {
+  padding-top: 5px;
+}
+/* Сброс стилей для поля ввода в браузерах webkit */
+input {
+  outline: none;
+}
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  font-family: inherit;
+  font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+  /* Удаляем иконку поиска и сброса */
+}
+/* Поле ввода строки поиска */
+input[type=search] {
+  background: #D92629 url(../img/search-icon.png) no-repeat 9px center;
+  border: solid 1px #99252E;
+  padding: 9px 10px 9px 28px;
+  width: 40px;
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+input[type=search]:focus {
+  width: 180px;
+  background-color: #D92629;
+  border-color: #99252E;
+  -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+}
+/* Форма */
+#search input[type=search] {
+  padding-left: 10px;
+  color: transparent;
+  cursor: pointer;
+}
+#search input[type=search]:hover {
+  background-color: #D92629;
+}
+#search input[type=search]:focus {
+  width: 130px;
+  padding-left: 32px;
+  color: #ffffff;
+  background-color: #D92629;
+  cursor: auto;
+}
+#search input:-moz-placeholder {
+  color: transparent;
+}
+#search input::-webkit-input-placeholder {
+  color: transparent;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.wrap {
+  background: #60935A;
+  background: linear-gradient(to top, #60935A, #80C416);
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.wrap .attention {
+  display: inline-block;
+  color: white;
+}
+.wrap .attention .callme {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+#products {
+  padding: 30px;
+  background-color: #ffffff;
+}
+#tarifs {
+  text-align: center;
+  padding: 30px;
+  background-color: #ffffff;
+}
+#tarifs th {
+  text-align: center;
+}
+.center {
+  text-align: center;
+}
+.tarifs-block-main .col-md-9 {
+  padding-right: 10px;
+}
+.otchetnost_table {
+  width: 100%;
+}
+#tarifs th,
+.otchetnost_table th {
+  background: #fff;
+  border: 2px solid #fff;
+  padding: 10px 17px;
+  text-align: center;
+  font-size: 13px;
+  color: #155396;
+}
+#tarifs th#th_1 {
+  width: 46%;
+  text-align: left;
+  font-size: 15px;
+}
+#tarifs th#th_6 {
+  width: 13%;
+  text-align: center;
+}
+#tarifs th#th_2 {
+  width: 13%;
+  text-align: center;
+}
+#tarifs th#th_3 {
+  width: 14%;
+  text-align: center;
+}
+#tarifs th#th_4 {
+  width: 14%;
+  text-align: center;
+}
+tr.section_table2 td,
+.tr1 td {
+  background: #F9F8E8;
+}
+tr.section_table1 td,
+.tr0 td {
+  background: #E5EFF9;
+}
+#tarifs td,
+.otchetnost_table td {
+  border: 2px solid #fff;
+  text-align: center;
+}
+#tarifs td.first {
+  text-align: left;
+  color: #155396;
+  padding: 11px 17px;
+}
+#tarifs td a {
+  color: #155396;
+  text-decoration: underline;
+}
+#tarifs td a:hover {
+  text-decoration: none;
+}
+#tarifs td.first_itogo {
+  background: #F2F2F2;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#tarifs .itogo {
+  background: #F2F2F2;
+}
+#tarifs .itogo a {
+  color: #D62626;
+  font-size: 16px;
+}
+#tarifs .content_tip {
+  text-align: left;
+  padding: 30px 5px;
+}
+#tarifs .content_tip div {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 1.5;
+}
+#tarifs .content_tip .content_tip_in_head {
+  font-style: normal;
+  font-size: 14px;
+}
+@media (min-width: 0px) {
+  #tarifs td,
+  #tarifs th,
+  .otchetnost_table td,
+  .otchetnost_table th {
+    font-size: 11px;
+    padding: 5px 5px;
+  }
+  #tarifs th#th_1 {
+    font-size: 10px;
+  }
+  #tarifs td.first_itogo {
+    font-size: 12px;
+  }
+}
+@media (min-width: 880px) {
+  #tarifs td,
+  #tarifs th,
+  .otchetnost_table td,
+  .otchetnost_table th {
+    font-size: 14px;
+    padding: 11px 17px;
+  }
+  #tarifs th#th_1 {
+    font-size: 15px;
+  }
+  #tarifs td.first_itogo {
+    font-size: 16px;
+  }
+}
+#tarifs-next th#th_5 {
+  background: #fff;
+  border: 2px solid #fff;
+  padding: 10px 7px;
+  text-align: left;
+  font-size: 13px;
+  color: #155396;
+}
+#tarifs-next td .class_checkbox {
+  width: 100%;
+  float: left;
+}
+#tarifs-next td .left_check {
+  width: 50px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+#tarifs-next td .right_check {
+  width: 160px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  float: left;
+}

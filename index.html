@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Аренда 1С</title>
+    <link href="style/main.less" rel="stylesheet">
+    <!-- Less -->
+    <script src="less/less.js"></script>
+    <link href="style/main.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Аренда 1С</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
+                <li>
+
+                <li><a href="#products">О Сервисе</a></li>
+                <li><a href="#tarifs">Тарифы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+            <form id="search" class="pull-right">
+                <input type="search" placeholder="Search">
+            </form>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+    <div class="row wrap">
+        <div class="attention">
+            <h3>Только сегодня и только сейЧАС все предложения со скидкой 50%</h3>
+            <h1>Внимание! До конца акции осталось</h1>
+            <script src="http://megatimer.ru/s/a6d33fb2492db6dbef13f059d939feba.js"></script>
+            <!-- Кнопка для открытия модального окна -->
+            <button type="button" class="btn btn-lg btn-danger callme" data-toggle="modal" data-target="#myModal">
+                Я УСПЕЮ
+            </button>
+        </div>
+        <!-- Модальное окно -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Заголовок модального окна -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title" id="myModalLabel">Как с Вами связаться?</h4>
+                    </div>
+                    <!-- Основная часть модального окна, содержащая форму для заказа обратного звонка -->
+                    <div class="modal-body">
+                        <!-- Форма для обратного звонка -->
+                        <form role="form" class="form-horizontal">
+                            <!-- Блок для ввода имени -->
+                            <div class="form-group has-feedback">
+                                <label for="login" class="control-label col-xs-3">Имя:</label>
+                                <div class="col-xs-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="login" class="form-control" required="required" name="login" placeholder="Иван" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                                    </div>
+                                    <span class="glyphicon form-control-feedback"></span>
+                                </div>
+                            </div>
+                            <!-- Блок для ввода номера телефона -->
+                            <div class="form-group has-feedback">
+                                <label for="phone" class="control-label col-xs-3">Номер:</label>
+                                <div class="col-xs-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                        <input type="tel" class="form-control" id="phone" name="phone" required placeholder="84951112233" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10,12}$">
+                                    </div>
+                                    <span class="glyphicon form-control-feedback"></span>
+                                </div>
+                            </div>
+                            <!-- Конец блока для ввода номера телефона-->
+                        </form>
+                    </div>
+                    <!-- Нижняя часть модального окна -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Я передумал</button>
+                        <button id="save" type="button" class="btn btn-success">Я УСПЕЛ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-success hidden" id="success-alert">
+            <h2>Успех</h2>
+            <div>Ваши данные были успешно отправлены.</div>
+        </div>
+    </div>
+    <div class="row" id="products">
+        <h1 class="contentheading">
+            Бухгалтерия Онлайн</h1>
+        <div id="text_block_1" class="text_block first_block">
+            <ul class="text_block_image">
+                <li>Оставили архив базы данных на другом компьютере?</li>
+                <li>Забыли обновить версию 1С до последней?</li>
+                <li>Ваш компьютер вообще не поддерживает работу с базой данных 1С?</li>
+            </ul>
+            <h2 class="color-text text_block color-text-blue">
+                Бухгалтерия Онлайн
+            </h2>
+            <div class="this_is color-text-blue">
+                — это именно то, что навсегда избавит Вас от головной боли!
+            </div>
+        </div>
+        <div class="col-md-12 center" id="toshow">
+            <h1>Успейте воспользоваться специальным предложением!</h1>
+            <h3>Только сегодня и только сейЧАС все предложения со скидкой 50%</h3>
+            <form role="form" class="form-horizontal">
+                <!-- Блок для ввода имени -->
+                <div class="form-group has-feedback">
+                    <label for="login3" class="control-label col-xs-3">Имя:</label>
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" id="login3" class="form-control" reqname="login2" required placeholder="Иван" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                        </div>
+                        <span class="glyphicon form-control-feedback"></span>
+                    </div>
+                </div>
+                <!-- Блок для ввода номера телефона -->
+                <div class="form-group has-feedback">
+                    <label for="phone2" class="control-label col-xs-3">Номер:</label>
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input type="tel" class="form-control" required id="phone3" name="phone2" placeholder="84951112233" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10,12}$">
+                        </div>
+                        <span class="glyphicon form-control-feedback"></span>
+                    </div>
+                </div>
+                <!-- Конец блока для ввода номера телефона-->
+                <button type="button" id="callformbtn2" class="btn btn-danger" data-target="#myProduct">Получить скидку</button>
+            </form>
+        </div>
+        <div class="alert alert-success hidden" id="show">
+            <h2>Успех</h2>
+            <div>Ваши данные были успешно отправлены.</div>
+        </div>
+</div>
+    <div class="row" id="tarifs">
+        <a class="btn btn-danger" data-toggle="collapse" href="#spoiler">Узнать подробности</a>
+        <div class="collapse" id="spoiler">
+            <div class="well">
+                <div style="" class="tarifs-block-main row">
+                    <h3>Только сегодня и только сейчас все предложения со скидкой 50%</h3>
+                    <div style="" class="col-md-9 col-sm-9 col-xs-12">
+                        <table style="" class="mceItemTable" id="tarif">
+                            <tbody style="">
+
+                            <tr>
+                                <th id="th_1">Доступные услуги и продукты *</th>
+                                <th id="th_6" class="text_tooltip" title="Тариф Web ::Тариф с базами, доступными через web">Web</th>
+                                <th id="th_2" class="text_tooltip" title="Тариф базовый ::Тариф предусматривает самостоятельное обновление информационных баз, согласно инструкции">Базовый</th>
+                                <th id="th_3" class="text_tooltip" title="Тариф Стандарт ::Тариф предусматривает максимальный выбор продуктов и предусматривает автоматическое обновление до 3-х  информационных баз на каждого пользователя">Стандарт</th>
+                                <th id="th_4" class="text_tooltip" title="Тариф УПП:: Максимальный тариф добавляет к стандартному тарифу использование конфигурации - Управление производственным предприятием.">УПП</th>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first"><a href="/konfig/buh.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1173&amp;Itemid=23">1C:Бухгалтерия 8.2 (ред. 2.0)</a><br></td>
+                                <td><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first"><a href="/konfig/buh30.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=2374&amp;Itemid=23">1C:Бухгалтерия 8.3 (ред. 3.0)</a><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first"><a href="/konfig/trade.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1178&amp;Itemid=23">1C:Управление торговлей 8.2 (ред. 10)</a><br></td>
+                                <td><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first"><a href="/konfig/trade11.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=2378&amp;Itemid=23">1C:Управление торговлей 8.3 (ред. 11)</a><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first"><a href="/konfig/crmproff.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1184&amp;Itemid=23">1С:СRМ ПРОФ 8.2</a><br></td>
+                                <td><br></td>
+                                <td><br></td>
+                                <td><br></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first"><a href="/konfig/crmproff20.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=2373&amp;Itemid=23">1С:СRМ ПРОФ 8.3 (ред. 2.0)</a><br></td>
+                                <td><br></td>
+                                <td><br></td>
+                                <td><br></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first"><a href="/konfig/zup.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1177&amp;Itemid=23">1C:Зарплата и управление персоналом 8.2</a><br></td>
+                                <td><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr style="" class="section_table1">
+                                <td class="first"><a href="/konfig/zup30.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=2188&amp;Itemid=23">1C:Зарплата и управление персоналом 8.3 (3.0)</a><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td style=""><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first"><a href="/konfig/roznitca.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1183&amp;Itemid=23">1С:Розница 8.2 (ред. 1.0)</a><br></td>
+                                <td><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first"><a href="/konfig/roznitca.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1183&amp;Itemid=23">1С:Розница 8.3 (ред. 2.0)</a><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first"><a href="/konfig/ynf.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1182&amp;Itemid=23">1С:Управление небольшой фирмой 8.3<br></a><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first"><a href="/konfig/dok.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1175&amp;Itemid=23">1С:Документооборот ПРОФ 8.3<br></a><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first"><a href="/konfig/buhb.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1180&amp;Itemid=23">1C:Бухгалтерия государственного учреждения 8.2</a><br></td>
+                                <td><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first"><a href="/konfig/buhgos2.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=2377&amp;Itemid=23">1C:Бухгалтерия государственного учреждения 8.3 (ред.&nbsp;2.0)</a><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first"><a href="/konfig/zikb.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1181&amp;Itemid=23">1C:Зарплата и кадры бюджетного учреждения 8.2</a><br></td>
+                                <td><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first"><a href="/konfig/komplex.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1176&amp;Itemid=23">1C:Комплексная автоматизация</a><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first"><a href="/konfig/upp.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1174&amp;Itemid=23">1C:Управление производственным предприятием</a><br></td>
+                                <td><br></td>
+                                <td><br></td>
+                                <td><br></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first"><a href="/materials/1cotchenost.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1646">1С:Отчетность</a><br><small>Оплачивается отдельно.<br>Не входит в расчетную сумму месячной оплаты выбранного тарифа</small></td>
+                                <td colspan="4">
+                                    <div class="row">
+                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                            <div class="get-region-label">Выберите свой регион:</div>
+                                            <div id="republic_main">		<select name="republic" id="republic"><option value="3900.00">Алтайский край</option><option value="4900.00">Амурская область</option><option value="3900.00">Архангельская область</option><option value="4900.00">Астраханская область</option><option value="3900.00">Белгородская область</option><option value="4900.00">Брянская область</option><option value="3900.00">Владимирская область</option><option value="3900.00">Волгоградская область</option><option value="2500.00">Вологодская область</option><option value="2500.00">Воронежская область</option><option value="5900.00">г. Москва</option><option value="4900.00">г. Санкт-Петербург</option><option value="1500.00">г. Севастополь</option><option value="4900.00">Еврейская Автономная область</option><option value="4900.00">Забайкальский край</option><option value="3900.00">Ивановская область</option><option value="3900.00">Иркутская область</option><option value="3900.00">Кабардино-Балкарская Республика</option><option value="3900.00">Калининградская область</option><option value="4900.00">Калужская область</option><option value="4900.00">Камчатский край</option><option value="3900.00">Кемеровская область</option><option value="3900.00">Кировская область</option><option value="3900.00">Костромская область</option><option value="4900.00">Краснодарский край</option><option value="3900.00">Красноярский край</option><option value="3900.00">Курганская область</option><option value="2500.00">Курская область</option><option value="4900.00">Ленинградская область</option><option value="4900.00">Липецкая область</option><option value="3900.00">Магаданская область</option><option value="4900.00">Московская область</option><option value="3900.00">Мурманская область</option><option value="3900.00">Ненецкий автономный округ</option><option value="4900.00">Нижегородская область</option><option value="3900.00">Новгородская область</option><option value="4900.00">Новосибирская область</option><option value="3900.00">Омская область</option><option value="4900.00">Оренбургская область</option><option value="2500.00">Орловская область</option><option value="3900.00">Пензенская область</option><option value="3900.00">Пермский край</option><option value="4900.00">Приморский край</option><option value="3900.00">Псковская область</option><option value="4900.00">Республика Адыгея</option><option value="3900.00">Республика Алтай</option><option value="3900.00">Республика Башкортостан</option><option value="4900.00">Республика Бурятия</option><option value="4900.00">Республика Дагестан</option><option value="4900.00">Республика Ингушетия</option><option value="4900.00">Республика Калмыкия</option><option value="3900.00">Республика Карачаево-Черкесия</option><option value="3900.00">Республика Карелия</option><option value="3900.00">Республика Коми</option><option value="1500.00">Республика Крым</option><option value="3900.00">Республика Марий Эл</option><option value="3900.00">Республика Мордовия</option><option value="4900.00">Республика Саха (Якутия)</option><option value="3900.00">Республика Северная Осетия</option><option value="3900.00">Республика Татарстан</option><option value="3900.00">Республика Тыва</option><option value="3900.00">Республика Хакасия</option><option value="4900.00">Ростовская область</option><option value="3900.00">Рязанская область</option><option value="3900.00">Самарская область</option><option value="3900.00">Саратовская область</option><option value="3900.00">Сахалинская область</option><option value="3900.00">Свердловская область</option><option value="4900.00">Смоленская область</option><option value="3900.00">Ставропольский край</option><option value="2500.00">Тамбовская область</option><option value="4900.00">Тверская область</option><option value="3900.00">Томская область</option><option value="4900.00">Тульская область</option><option value="3900.00">Тюменская область</option><option value="3900.00">Удмурдская Республика</option><option value="4900.00">Ульяновская область</option><option value="3900.00">Хабаровский край</option><option value="3900.00">Ханты-Мансийский АО</option><option value="3900.00">Челябинская область</option><option value="3900.00">Чеченская Республика</option><option value="3900.00">Чувашская республика</option><option value="4900.00">Чукотский Автономный округ</option><option value="3900.00">Ямало-Ненецкий АО</option><option value="4900.00">Ярославская область</option></select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                            <div class="ot-price color-text-dark-blue">
+                                                <small>стоимость в год:</small>
+                                                <a id="price3600_main" class="big-s" href="#" mce_href="#" data-toggle="modal" data-target="#zakaz-otchetnost">3900</a>&nbsp;<small>руб.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first">Доступ к базам через WEB браузер</td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first"><a href="/instructions/pdfprint.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=31">Альтернативный </a>способ печати</td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first">Регулярность сохранения архивной копии **</td>
+                                <td>ежедневно</td>
+                                <td>ежедневно</td>
+                                <td>ежедневно</td>
+                                <td class="last">ежедневно</td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first">Предоставление доступа к <a href="/instructions/update.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=24">обновлениям</a><br></td>
+                                <td><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first">Предоставление доступа к архивным копиям по FTP</td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first">Автоматическая установка <a href="/instructions/update.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=24">обновлений</a>&nbsp;***</td>
+                                <td><br></td>
+                                <td><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first"><a href="/materials/2012-08-31-12-52-18.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=1582">Заморозка счета</a> на срок до 3-х месяцев</td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table2">
+                                <td class="first section_table2">Доступ к конфигуратору</td>
+                                <td><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table1">
+                                <td class="first section_table2">Доступ через удаленный рабочий стол (RDP)</td>
+                                <td><br></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                                <td class="last"><img alt="есть" src="http://arenda1c.ru/images/stories/bullit.png" mce_src="http://arenda1c.ru/images/stories/bullit.png"></td>
+                            </tr>
+
+                            <tr class="section_table2" id="disk-polezn">
+                                <td class="first">Дисковое пространство, выделяемое на 1 пользователя</td>
+                                <td>1Гб</td>
+                                <td>1Гб</td>
+                                <td>1Гб</td>
+                                <td class="last">2Гб</td>
+                            </tr>
+
+                            <tr class="section_table1" id="itogo_fixed" style="position: fixed;">
+                                <td class="first first_itogo" style="width: 236px;">Итого к оплате за месяц</td>
+                                <td class="itogo" style="width: 113px;">
+                                    <a class="text_tooltip" title="Регистрация::Во время регистрации, можно сменить тариф" href="https://cabinet.arenda1c.ru/index.php?option=com_user&amp;view=register&amp;tarif=web#content" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_user&amp;view=register&amp;tarif=web#content" id="itogo_4">450р</a><br>
+                                </td>
+                                <td class="itogo" style="width: 113px;">
+                                    <a class="text_tooltip" title="Регистрация::Во время регистрации, можно сменить тариф" href="https://cabinet.arenda1c.ru/index.php?option=com_user&amp;view=register&amp;tarif=base#content" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_user&amp;view=register&amp;tarif=base#content" id="itogo_1">690р</a><br>
+                                </td>
+                                <td class="itogo" style="width: 113px;">
+                                    <a class="text_tooltip" title="Регистрация::Во время регистрации, можно сменить тариф" href="https://cabinet.arenda1c.ru/index.php?option=com_user&amp;view=register&amp;tarif=standart#content" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_user&amp;view=register&amp;tarif=standart#content" id="itogo_2">990р</a><br>
+                                </td>
+                                <td class="itogo last" style="width: 113px;">
+                                    <a class="text_tooltip" title="Регистрация::Во время регистрации, можно сменить тариф" href="https://cabinet.arenda1c.ru/index.php?option=com_user&amp;view=register&amp;tarif=upp#content" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_user&amp;view=register&amp;tarif=upp#content" id="itogo_3">1500р</a><br>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="content_tip" colspan="5">
+                                    <div class="content_tip_in_head">
+                                        <span style="font-weight: bold;" mce_style="font-weight: bold;">Все представленные продукты 1с&nbsp; версии ПРОФ</span>
+                                    </div>
+                                    <div><br></div>
+                                    <div>
+                                        <p>
+                                            * Продукты доступные в рамках тарифа можно использовать в любых сочетаниях.<br>
+                                            &nbsp;&nbsp; Пользователь может завести 1 любую базу с любым продуктом входящим в тариф на 1 пользователя.
+                                        </p>
+                                        <p>
+                                            ** Архивные копии хранятся 10 дней.</p>
+                                        <p>
+                                            *** Установка <a href="/instructions/update.html" mce_href="https://cabinet.arenda1c.ru/index.php?option=com_content&amp;view=article&amp;id=24">обновлений</a> для 1 типовой базы на каждого пользователя.
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div style="" class="col-md-3 col-sm-3">
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 center" id="toshow2">
+                        <h1>Успейте воспользоваться специальным предложением!</h1>
+                        <h3>Только сегодня и только сейчас все предложения со скидкой 50%</h3>
+                        <form role="form" class="form-horizontal">
+                            <!-- Блок для ввода имени -->
+                            <div class="form-group has-feedback">
+                                <label for="login2" class="control-label col-xs-3">Имя:</label>
+                                <div class="col-xs-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="login2" class="form-control" name="login2" required placeholder="Иван" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                                    </div>
+                                    <span class="glyphicon form-control-feedback"></span>
+                                </div>
+                            </div>
+                            <!-- Блок для ввода номера телефона -->
+                            <div class="form-group has-feedback">
+                                <label for="phone2" class="control-label col-xs-3">Номер:</label>
+                                <div class="col-xs-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                        <input type="tel" class="form-control" id="phone2" name="phone2" required placeholder="84951112233" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10,12}$">
+                                    </div>
+                                    <span class="glyphicon form-control-feedback"></span>
+                                </div>
+                            </div>
+                            <!-- Конец блока для ввода номера телефона-->
+                            <button type="button" id="callformbtn" class="btn btn-danger" data-target="#myProduct">Получить скидку</button>
+                        </form>
+                    </div>
+                        <div class="alert alert-success hidden" id="show2">
+                            <h2>Успех</h2>
+                            <div>Ваши данные были успешно отправлены.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div><!-- /.container -->
+
+<!--...-->
+
+<!-- jQuery -->
+<script src="jq/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.js"></script>
+<!--Скрипт для валидации форм модального окна-->
+<script src="js/valid.js"></script>
+
+</body>
+</html>
