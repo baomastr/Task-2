@@ -105,8 +105,8 @@
         </div>
 
         <div class="alert alert-success hidden" id="success-alert">
-            <h2>Успех</h2>
-            <div>Ваши данные были успешно отправлены.</div>
+            <h2>Спасибо!</h2>
+            <div>Мы свяжемся с Вами в течение 15 минут</div>
         </div>
     </div>
     <div class="row" id="products">
@@ -128,34 +128,44 @@
         <div class="col-md-12 center" id="toshow">
             <h1>Успейте воспользоваться специальным предложением!</h1>
             <h3>Только сегодня и только сейЧАС все предложения со скидкой 50%</h3>
-            <form role="form" class="form-horizontal" id="form3">
+            <form role="form" class="form-horizontal form3" id="form3">
                 <!-- Блок для ввода имени -->
                 <div class="form-group has-feedback">
                     <label for="login3" class="control-label col-xs-3">Имя:</label>
                     <div class="col-xs-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input type="text" id="login3" class="form-control" name="login2" required placeholder="Иван" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                            <input type="text" id="login3" class="form-control" name="login3" required placeholder="Иван" pattern="[A-Za-zА-Яа-яЁё]{2,}">
                         </div>
                         <span class="glyphicon form-control-feedback"></span>
                     </div>
                 </div>
                 <!-- Блок для ввода номера телефона -->
                 <div class="form-group has-feedback">
-                    <label for="phone2" class="control-label col-xs-3">Номер:</label>
+                    <label for="phone3" class="control-label col-xs-3">Номер:</label>
                     <div class="col-xs-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                            <input type="tel" class="form-control" required id="phone3" name="phone2" placeholder="84951112233" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10,12}$">
+                            <input type="tel" class="form-control" required id="phone3" name="phone3" placeholder="84951112233" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10,12}$">
                         </div>
                         <span class="glyphicon form-control-feedback"></span>
                     </div>
                 </div>
                 <!-- Конец блока для ввода номера телефона-->
-                <button type="submit" value="submit" form="form3" id="callformbtn2" class="btn btn-danger" data-target="#myProduct">Получить скидку</button>
+                <button type="submit" value="submit" form="form3" id="callformbtn3" class="btn btn-danger" data-target="#myProduct">Получить скидку</button>
             </form>
         </div>
-        <div class="alert alert-success hidden" id="show">
+        <div class="modal fade" id="modal3" tabindex="-1" role="form">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3>Спасибо за заявку</h3>
+                        <h4>Мы свяжемся с Вами в течение 15 минут</h4>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="alert alert-success hidden" id="show3">
             <h2>Успех</h2>
             <div>Ваши данные были успешно отправлены.</div>
         </div>
@@ -460,7 +470,7 @@
                         <div class="col-md-12 center" id="toshow2">
                         <h1>Успейте воспользоваться специальным предложением!</h1>
                         <h3>Только сегодня и только сейчас все предложения со скидкой 50%</h3>
-                        <form role="form" class="form-horizontal" id="form2">
+                        <form role="form" class="form-horizontal form3" id="form2">
                             <!-- Блок для ввода имени -->
                             <div class="form-group has-feedback">
                                 <label for="login2" class="control-label col-xs-3">Имя:</label>
@@ -484,12 +494,12 @@
                                 </div>
                             </div>
                             <!-- Конец блока для ввода номера телефона-->
-                            <button type="submit" id="callformbtn" class="btn btn-danger" form="form2" value="submit" data-target="#myProduct">Получить скидку</button>
+                            <button type="submit" id="callformbtn2" class="btn btn-danger" form="form2" value="submit" data-target="#myProduct">Получить скидку</button>
                         </form>
                     </div>
                         <div class="alert alert-success hidden" id="show2">
-                            <h2>Успех</h2>
-                            <div>Ваши данные были успешно отправлены.</div>
+                            <h2>Спасибо!</h2>
+                            <div>Мы свяжемся с Вами в течение 15 минут</div>
                         </div>
                     </div>
                 </div>
